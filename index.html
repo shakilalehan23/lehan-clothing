@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lehan Clothing | Premium Sri Lankan Fashion</title>
+    <meta name="description"
+        content="Lehan Clothing - The ultimate destination for premium, stylish streetwear and fashion. Discover our latest collections.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f6f6f6',
+                            100: '#e7e7e7',
+                            200: '#d1d1d1',
+                            300: '#b0b0b0',
+                            400: '#888888',
+                            500: '#6d6d6d',
+                            600: '#5d5d5d',
+                            700: '#4f4f4f',
+                            800: '#454545',
+                            900: '#3d3d3d',
+                            950: '#1a1a1a',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+            emailjs.init("mLjzbWaWoD63sFC3w");
+        })();
+    </script>
+</head>
+
+<body class="bg-gray-50 text-gray-900 antialiased selection:bg-brand-900 selection:text-white">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="fixed w-full z-50 transition-all duration-300 absolute-top bg-transparent text-white top-0"
+        style="color: inherit;">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center cursor-pointer">
+                    <a href="index.html"
+                        class="text-3xl font-extrabold tracking-tighter uppercase text-brand-950 mix-blend-difference hover:text-gray-600 transition">Lehan.</a>
+                </div>
+                <div
+                    class="hidden md:flex space-x-8 items-center bg-white/10 backdrop-blur-md px-6 py-2 rounded-full border border-white/20 shadow-sm text-gray-900">
+                    <a href="index.html" class="text-sm font-semibold hover:text-gray-500 transition">Home</a>
+                    <a href="shop.html" class="text-sm font-semibold hover:text-gray-500 transition">Shop</a>
+                    <a href="about.html" class="text-sm font-semibold hover:text-gray-500 transition">About Us</a>
+                    <a href="contact.html" class="text-sm font-semibold hover:text-gray-500 transition">Contact</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-5 text-gray-900 mix-blend-difference">
+                    <a href="#" class="hover:text-gray-500 transition"><i class="fas fa-search text-xl"></i></a>
+                    <a href="account.html" class="hover:text-gray-500 transition"><i class="far fa-user text-xl"></i></a>
+                    <a href="cart.html" class="hover:text-gray-500 transition relative">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span
+                            class="global-cart-count absolute -top-2 -right-2 bg-brand-950 text-white text-xs font-bold rounded-full h-4 w-4 flex items-center justify-center">0</span>
+                    </a>
+                </div>
+                <!-- Mobile menu button -->
+                <div class="md:hidden flex items-center text-gray-900 mix-blend-difference">
+                    <button id="mobile-menu-btn" class="focus:outline-none">
+                        <i class="fas fa-bars text-2xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu -->
+        <div id="mobile-menu"
+            class="hidden md:hidden bg-white text-gray-900 shadow-xl absolute w-full left-0 top-20 border-t border-gray-100">
+            <div class="px-4 pt-2 pb-6 space-y-2 text-center flex flex-col">
+                <a href="index.html" class="block px-3 py-3 text-base font-semibold border-b hover:bg-gray-50">Home</a>
+                <a href="shop.html" class="block px-3 py-3 text-base font-semibold border-b hover:bg-gray-50">Shop</a>
+                <a href="about.html" class="block px-3 py-3 text-base font-semibold border-b hover:bg-gray-50">About
+                    Us</a>
+                <a href="contact.html" class="block px-3 py-3 text-base font-semibold hover:bg-gray-50">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="relative h-screen flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="assets/images/hero.png" alt="Lehan Clothing Hero Banner"
+                class="w-full h-full object-cover object-center scale-105 transform">
+            <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-black/30 to-black/10"></div>
+        </div>
+
+        <div class="relative z-10 text-center px-4 max-w-5xl mx-auto mt-20">
+            <span
+                class="fade-in block text-gray-300 text-sm md:text-base tracking-[0.2em] uppercase mb-4 font-semibold shadow-sm">Welcome
+                to the future of Sri Lankan street fashion</span>
+            <h1
+                class="fade-in delay-100 text-5xl md:text-7xl lg:text-8xl font-black text-white leading-tight mb-6 tracking-tight drop-shadow-lg">
+                DEFINE YOUR<br><span
+                    class="text-transparent bg-clip-text bg-gradient-to-r from-gray-100 to-gray-500">OWN STYLE</span>
+            </h1>
+            <p class="fade-in delay-200 text-lg md:text-xl text-gray-200 mb-10 max-w-2xl mx-auto font-light">
+                Experience the latest styles with Lehan Clothing and show your unique identity to the world. Highest quality materials with
+                pristine minimal styles.
+            </p>
+            <div class="fade-in delay-300 flex flex-col sm:flex-row justify-center space-y-4 sm:space-y-0 sm:space-x-6">
+                <a href="shop.html"
+                    class="btn-primary bg-white text-brand-950 px-10 py-4 rounded-none font-bold text-sm tracking-widest uppercase hover:bg-gray-200 transition shadow-xl border border-white inline-block">Shop
+                    Now</a>
+                <a href="#collections"
+                    class="btn-primary dark-glass text-white px-10 py-4 rounded-none font-bold text-sm tracking-widest uppercase hover:text-white transition shadow-xl border border-white/30 inline-block">Explore
+                    Collections</a>
+            </div>
+        </div>
+
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 z-10 animate-bounce text-white/70">
+            <a href="#collections"><i class="fas fa-chevron-down text-2xl"></i></a>
+        </div>
+    </div>
+
+    <!-- Featured Products / Collections -->
+    <section id="collections" class="py-24 bg-white fade-in-section opacity-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                <div class="max-w-2xl">
+                    <h4 class="text-brand-500 text-sm font-bold tracking-widest uppercase mb-2">New Arrivals</h4>
+                    <h2 class="text-4xl md:text-5xl font-extrabold text-brand-950 tracking-tight">Trending Now.</h2>
+                </div>
+                <a href="shop.html"
+                    class="hidden md:inline-flex items-center text-sm font-bold uppercase tracking-wider border-b-2 border-brand-950 pb-1 hover:text-brand-500 hover:border-brand-500 transition">View
+                    All Products <i class="fas fa-arrow-right ml-2"></i></a>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+                <!-- Product 1 -->
+                <div class="product-card group cursor-pointer">
+                    <div class="relative w-full h-[30rem] bg-gray-100 overflow-hidden rounded-sm mb-6">
+                        <img src="assets/images/product1.png" alt="Midnight Black Premium T-Shirt"
+                            class="product-image w-full h-full object-cover object-center">
+                        <div
+                            class="absolute top-4 left-4 bg-brand-950 text-white text-xs font-bold px-3 py-1 uppercase tracking-wider z-10">
+                            New</div>
+                        <!-- Add to cart overlay -->
+                        <div
+                            class="absolute bottom-0 left-0 w-full p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-10">
+                            <button
+                                class="w-full bg-white/90 backdrop-blur-sm text-brand-950 font-bold py-3 uppercase text-sm tracking-wider hover:bg-brand-950 hover:text-white transition border border-brand-950/10 shadow-lg">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-brand-500 transition">Midnight
+                                Black Premium T-Shirt</h3>
+                            <p class="text-gray-500 text-sm mt-1">100% Cotton | Minimalist</p>
+                        </div>
+                        <p class="text-lg font-extrabold text-brand-950">Rs. 2,900</p>
+                    </div>
+                </div>
+
+                <!-- Product 2 -->
+                <div class="product-card group cursor-pointer">
+                    <div class="relative w-full h-[30rem] bg-gray-100 overflow-hidden rounded-sm mb-6">
+                        <img src="assets/images/product2.png" alt="Summer Bloom Dress"
+                            class="product-image w-full h-full object-cover object-center">
+                        <!-- Add to cart overlay -->
+                        <div
+                            class="absolute bottom-0 left-0 w-full p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-10">
+                            <button
+                                class="w-full bg-white/90 backdrop-blur-sm text-brand-950 font-bold py-3 uppercase text-sm tracking-wider hover:bg-brand-950 hover:text-white transition border border-brand-950/10 shadow-lg">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-brand-500 transition">Summer
+                                Bloom Dress</h3>
+                            <p class="text-gray-500 text-sm mt-1">Floral | Breathable</p>
+                        </div>
+                        <p class="text-lg font-extrabold text-brand-950">Rs. 4,500</p>
+                    </div>
+                </div>
+
+                <!-- Product 3 -->
+                <div class="product-card group cursor-pointer">
+                    <div class="relative w-full h-[30rem] bg-gray-100 overflow-hidden rounded-sm mb-6">
+                        <img src="assets/images/product3.png" alt="Urban Signature Hoodie"
+                            class="product-image w-full h-full object-cover object-center">
+                        <div
+                            class="absolute top-4 left-4 bg-red-600 text-white text-xs font-bold px-3 py-1 uppercase tracking-wider z-10">
+                            Sale</div>
+                        <!-- Add to cart overlay -->
+                        <div
+                            class="absolute bottom-0 left-0 w-full p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-10">
+                            <button
+                                class="w-full bg-white/90 backdrop-blur-sm text-brand-950 font-bold py-3 uppercase text-sm tracking-wider hover:bg-brand-950 hover:text-white transition border border-brand-950/10 shadow-lg">Add
+                                to Cart</button>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-start">
+                        <div>
+                            <h3 class="text-lg font-bold text-gray-900 group-hover:text-brand-500 transition">Urban
+                                Signature Hoodie</h3>
+                            <p class="text-gray-500 text-sm mt-1">Oversized | Grey</p>
+                        </div>
+                        <div class="text-right">
+                            <p class="text-sm font-medium text-gray-400 line-through">Rs. 6,000</p>
+                            <p class="text-lg font-extrabold text-red-600">Rs. 4,800</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="mt-12 text-center md:hidden">
+                <a href="shop.html"
+                    class="inline-block px-8 py-3 border border-brand-950 text-brand-950 font-bold uppercase tracking-wider text-sm hover:bg-brand-950 hover:text-white transition">View
+                    All Products</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories / Promo Section -->
+    <section class="py-12 bg-gray-50 fade-in-section opacity-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="relative h-[400px] group overflow-hidden cursor-pointer bg-black">
+                    <img src="assets/images/product1.png"
+                        class="w-full h-full object-cover filter opacity-60 group-hover:opacity-40 group-hover:scale-105 transition duration-700"
+                        alt="Men's Collection">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                        <h3 class="text-white text-4xl font-black uppercase tracking-widest mb-4 drop-shadow-md">Men's
+                        </h3>
+                        <a href="shop.html"
+                            class="bg-white/20 backdrop-blur-md border border-white text-white px-6 py-2 uppercase text-sm tracking-widest font-bold hover:bg-white hover:text-brand-950 transition">Shop
+                            Now</a>
+                    </div>
+                </div>
+                <div class="relative h-[400px] group overflow-hidden cursor-pointer bg-black">
+                    <img src="assets/images/product2.png"
+                        class="w-full h-full object-cover filter opacity-60 group-hover:opacity-40 group-hover:scale-105 transition duration-700"
+                        alt="Women's Collection">
+                    <div class="absolute inset-0 flex flex-col items-center justify-center p-6 text-center">
+                        <h3 class="text-white text-4xl font-black uppercase tracking-widest mb-4 drop-shadow-md">Women's
+                        </h3>
+                        <a href="shop.html"
+                            class="bg-white/20 backdrop-blur-md border border-white text-white px-6 py-2 uppercase text-sm tracking-widest font-bold hover:bg-white hover:text-brand-950 transition">Shop
+                            Now</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Snippet -->
+    <section class="py-24 bg-brand-950 text-white fade-in-section opacity-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                <div>
+                    <h2 class="text-4xl md:text-5xl font-black mb-6 tracking-tight">Crafted with Passion. <br><span
+                            class="text-brand-400">Designed for You.</span></h2>
+                    <p class="text-gray-300 text-lg mb-8 font-light leading-relaxed">
+                        Lehan Clothing is more than just a brand that sells clothes. It is an artistic creation that realizes the fashion dreams of the youth in Sri Lanka. Using locally sourced fabrics and paying meticulous attention to detail, we ensure every piece tells a story.
+                    </p>
+                    <a href="about.html"
+                        class="inline-flex items-center text-white border-b border-brand-400 pb-1 hover:text-brand-400 transition tracking-widest uppercase text-sm font-bold">Discover
+                        Our Story <i class="fas fa-arrow-right ml-2"></i></a>
+                </div>
+                <div class="relative h-[500px]">
+                    <img src="assets/images/about.png" alt="Lehan Design Studio"
+                        class="w-full h-full object-cover shadow-2xl rounded-sm">
+                    <div class="absolute -bottom-6 -left-6 bg-white text-brand-950 p-8 shadow-2xl rounded-sm">
+                        <p class="text-5xl font-black mb-1">100%</p>
+                        <p class="text-sm font-bold uppercase tracking-wider text-brand-500">Premium Quality</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-24 bg-white fade-in-section opacity-0 border-b border-gray-100">
+        <div class="max-w-4xl mx-auto px-4 text-center">
+            <h2 class="text-3xl md:text-4xl font-black text-brand-950 mb-4 tracking-tight">Join the Lehan Club</h2>
+            <p class="text-gray-500 mb-10 text-lg">Subscribe to get special offers, free giveaways, and
+                once-in-a-lifetime deals.</p>
+            <div id="newsletter-container">
+                <form id="newsletter-form" class="flex flex-col sm:flex-row max-w-2xl mx-auto gap-4">
+                    <input type="email" id="newsletter-email" placeholder="Enter your email address"
+                        class="flex-1 bg-gray-50 border border-gray-200 px-6 py-4 focus:outline-none focus:border-brand-950 focus:ring-1 focus:ring-brand-950 transition rounded-none text-gray-900"
+                        required>
+                    <button type="submit" id="newsletter-submit-btn"
+                        class="bg-brand-950 text-white font-bold uppercase tracking-wider px-10 py-4 hover:bg-brand-800 transition rounded-none">Subscribe</button>
+                </form>
+                <div id="newsletter-success" class="hidden mt-6 p-6 bg-green-50 border border-green-200 text-green-800 text-center rounded-sm max-w-2xl mx-auto">
+                    <i class="fas fa-check-circle text-2xl mb-2 block"></i>
+                    <p class="font-bold uppercase tracking-wider text-sm">Welcome to the Club!</p>
+                    <p class="text-xs mt-1">Check your inbox for your 10% discount code.</p>
+                </div>
+            </div>
+
+            <script>
+                document.getElementById('newsletter-form').addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    const btn = document.getElementById('newsletter-submit-btn');
+                    const form = document.getElementById('newsletter-form');
+                    const success = document.getElementById('newsletter-success');
+                    const email = document.getElementById('newsletter-email').value;
+                    
+                    btn.disabled = true;
+                    btn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Subscribing...';
+                    
+                    // Send actual email via EmailJS
+                    emailjs.send("service_7m47hj7", "template_kwq9n0r", {
+                        to_email: email,
+                        message: "Welcome to Lehan Clothing Club! You've successfully subscribed."
+                    }).then(function() {
+                        form.classList.add('hidden');
+                        success.classList.remove('hidden');
+                        btn.disabled = false;
+                        btn.innerHTML = 'Subscribe';
+                    }, function(error) {
+                        console.log('EmailJS FAILED...', error);
+                        alert('Oops! Something went wrong. Please try again later.');
+                        btn.disabled = false;
+                        btn.innerHTML = 'Subscribe';
+                    });
+                });
+            </script>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 pt-20 pb-10 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div>
+                    <h3 class="text-3xl font-black tracking-tighter uppercase text-brand-950 mb-6">Lehan.</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Elevating Sri Lankan streetwear to global
+                        standards. Premium quality clothing designed for the modern individual.</p>
+                    <div class="flex space-x-4">
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-brand-950 hover:text-white hover:border-brand-950 transition shadow-sm"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-brand-950 hover:text-white hover:border-brand-950 transition shadow-sm"><i
+                                class="fab fa-instagram"></i></a>
+                        <a href="#"
+                            class="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-brand-950 hover:text-white hover:border-brand-950 transition shadow-sm"><i
+                                class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-brand-950 mb-6">Shop</h4>
+                    <ul class="space-y-3">
+                        <li><a href="shop.html" class="text-gray-500 hover:text-brand-950 transition text-sm">All
+                                Products</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-brand-950 transition text-sm">Men's
+                                Collection</a></li>
+                        <li><a href="#" class="text-gray-500 hover:text-brand-950 transition text-sm">Women's
+                                Collection</a></li>
+                        <li><a href="shop.html?category=accessories" class="text-gray-500 hover:text-brand-950 transition text-sm">Accessories</a>
+                        </li>
+                        <li><a href="shop.html?sort=latest" class="text-gray-500 hover:text-brand-950 transition text-sm">New Arrivals</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-brand-950 mb-6">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-500 hover:text-brand-950 transition text-sm">About
+                                Us</a></li>
+                        <li><a href="contact.html" class="text-gray-500 hover:text-brand-950 transition text-sm">Contact
+                                Us</a></li>
+                        <li><a href="faq.html" class="text-gray-500 hover:text-brand-950 transition text-sm">FAQ</a></li>
+                        <li><a href="terms.html" class="text-gray-500 hover:text-brand-950 transition text-sm">Terms &
+                                Conditions</a></li>
+                        <li><a href="privacy.html" class="text-gray-500 hover:text-brand-950 transition text-sm">Privacy Policy</a>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-brand-950 mb-6">Contact Info</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-brand-500 mt-1 mr-3"></i>
+                            <span class="text-gray-500 text-sm">12 St. Sylvester Road, Mount Lavinia, Sri Lanka.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-brand-500 mr-3"></i>
+                            <span class="text-gray-500 text-sm">076 830 4918</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-brand-500 mr-3"></i>
+                            <span class="text-gray-500 text-sm">info@lehanclothing.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="pt-8 border-t border-gray-200 text-center flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">&copy; 2026 Lehan Clothing (Pvt) Ltd. All rights reserved.</p>
+                <div class="mt-4 md:mt-0 flex space-x-4">
+                    <i class="fab fa-cc-visa text-gray-400 text-2xl"></i>
+                    <i class="fab fa-cc-mastercard text-gray-400 text-2xl"></i>
+                    <i class="fab fa-cc-amex text-gray-400 text-2xl"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

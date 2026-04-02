@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Account | Lehan Clothing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f6f6f6',
+                            950: '#1a1a1a',
+                            500: '#6d6d6d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-gray-50 text-gray-900 antialiased font-sans flex flex-col min-h-screen">
+
+    <!-- Navigation -->
+    <nav class="w-full relative z-50 bg-white border-b border-gray-100 sticky top-0 shadow-sm shrink-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html" class="text-3xl font-extrabold tracking-tighter uppercase text-brand-950 hover:text-brand-500 transition">Lehan.</a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html" class="text-sm font-semibold text-gray-600 hover:text-brand-950 transition">Home</a>
+                    <a href="shop.html" class="text-sm font-semibold text-gray-600 hover:text-brand-950 transition">Shop</a>
+                    <a href="about.html" class="text-sm font-semibold text-gray-600 hover:text-brand-950 transition">About Us</a>
+                    <a href="contact.html" class="text-sm font-semibold text-gray-600 hover:text-brand-950 transition">Contact</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-5 text-gray-900">
+                    <a href="#" class="hover:text-brand-500 transition"><i class="fas fa-search text-xl"></i></a>
+                    <a href="account.html" class="text-brand-950 transition"><i class="fas fa-user text-xl"></i></a>
+                    <a href="cart.html" class="hover:text-brand-500 transition relative">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span class="global-cart-count absolute -top-2 -right-2 bg-brand-950 text-white text-xs font-bold rounded-full h-4 w-4 flex items-center justify-center">0</span>
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="focus:outline-none"><i class="fas fa-bars text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <div class="flex-1 flex flex-col justify-center py-20 px-4">
+        <div class="max-w-md w-full mx-auto">
+            
+            <!-- Logo/Headline -->
+            <div class="text-center mb-10">
+                <h1 class="text-4xl font-black uppercase tracking-tight text-brand-950 mb-2">My Account</h1>
+                <p class="text-gray-500 font-medium">Elevating your shopping experience.</p>
+            </div>
+
+            <!-- Auth Container -->
+            <div class="bg-white p-8 md:p-10 shadow-2xl rounded-sm border-t-4 border-brand-950">
+                
+                <!-- Tabs -->
+                <div class="flex border-b border-gray-100 mb-8">
+                    <button id="login-tab" class="flex-1 pb-4 text-sm font-bold uppercase tracking-widest text-brand-950 border-b-2 border-brand-950 transition">Sign In</button>
+                    <button id="register-tab" class="flex-1 pb-4 text-sm font-bold uppercase tracking-widest text-gray-400 hover:text-brand-950 transition border-b-2 border-transparent">Sign Up</button>
+                </div>
+
+                <!-- Login Form -->
+                <form id="login-form" class="space-y-6">
+                    <div>
+                        <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">Email Address</label>
+                        <input type="email" required class="w-full bg-gray-50 border border-gray-200 p-4 focus:outline-none focus:border-brand-950 focus:ring-1 focus:ring-brand-950 transition rounded-none text-brand-950" placeholder="john@example.com">
+                    </div>
+                    <div>
+                        <div class="flex justify-between items-center mb-2">
+                            <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest">Password</label>
+                            <a href="#" class="text-[10px] font-bold text-gray-400 hover:text-brand-950 uppercase tracking-widest transition">Forgot?</a>
+                        </div>
+                        <input type="password" required class="w-full bg-gray-50 border border-gray-200 p-4 focus:outline-none focus:border-brand-950 focus:ring-1 focus:ring-brand-950 transition rounded-none text-brand-950" placeholder="••••••••">
+                    </div>
+                    <button type="submit" class="w-full bg-brand-950 text-white font-bold py-5 uppercase tracking-widest hover:bg-gray-800 transition shadow-xl mt-4">Sign In</button>
+                    
+                    <div class="relative py-4 flex items-center">
+                        <div class="flex-grow border-t border-gray-100"></div>
+                        <span class="flex-shrink mx-4 text-[10px] font-bold text-gray-300 uppercase tracking-widest">Or Continue With</span>
+                        <div class="flex-grow border-t border-gray-100"></div>
+                    </div>
+
+                    <div class="grid grid-cols-2 gap-4">
+                        <button type="button" class="flex items-center justify-center space-x-2 border border-gray-200 py-3 hover:bg-gray-50 transition">
+                            <i class="fab fa-google text-gray-400"></i>
+                            <span class="text-xs font-bold uppercase tracking-wider text-gray-600">Google</span>
+                        </button>
+                        <button type="button" class="flex items-center justify-center space-x-2 border border-gray-200 py-3 hover:bg-gray-50 transition">
+                            <i class="fab fa-facebook-f text-gray-400"></i>
+                            <span class="text-xs font-bold uppercase tracking-wider text-gray-600">Facebook</span>
+                        </button>
+                    </div>
+                </form>
+
+                <!-- Register Form -->
+                <form id="register-form" class="space-y-5 hidden">
+                    <div>
+                        <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">Full Name</label>
+                        <input type="text" required class="w-full bg-gray-50 border border-gray-200 p-4 focus:outline-none focus:border-brand-950 focus:ring-1 focus:ring-brand-950 transition rounded-none text-brand-950" placeholder="John Doe">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">Email Address</label>
+                        <input type="email" required class="w-full bg-gray-50 border border-gray-200 p-4 focus:outline-none focus:border-brand-950 focus:ring-1 focus:ring-brand-950 transition rounded-none text-brand-950" placeholder="john@example.com">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] font-black text-gray-400 uppercase tracking-widest mb-2">Password</label>
+                        <input type="password" required class="w-full bg-gray-50 border border-gray-200 p-4 focus:outline-none focus:border-brand-950 focus:ring-1 focus:ring-brand-950 transition rounded-none text-brand-950" placeholder="••••••••">
+                    </div>
+                    <div class="flex items-center">
+                        <input type="checkbox" id="terms" required class="w-4 h-4 accent-brand-950">
+                        <label for="terms" class="ml-3 text-xs text-gray-500">I agree to the <a href="terms.html" class="text-brand-950 font-bold underline">Terms & Conditions</a></label>
+                    </div>
+                    <button type="submit" class="w-full bg-brand-950 text-white font-bold py-5 uppercase tracking-widest hover:bg-gray-800 transition shadow-xl mt-4">Create Account</button>
+                </form>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-brand-950 text-white pt-16 pb-10 mt-auto shrink-0">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
+            <h3 class="text-3xl font-black tracking-tighter uppercase mb-4 text-white">Lehan.</h3>
+            <p class="text-gray-400 text-sm font-light tracking-wide">&copy; 2026 Lehan Clothing (Pvt) Ltd. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        const loginTab = document.getElementById('login-tab');
+        const registerTab = document.getElementById('register-tab');
+        const loginForm = document.getElementById('login-form');
+        const registerForm = document.getElementById('register-form');
+
+        loginTab.addEventListener('click', () => {
+            loginTab.classList.add('border-brand-950', 'text-brand-950');
+            loginTab.classList.remove('text-gray-400', 'border-transparent');
+            registerTab.classList.remove('border-brand-950', 'text-brand-950');
+            registerTab.classList.add('text-gray-400', 'border-transparent');
+            loginForm.classList.remove('hidden');
+            registerForm.classList.add('hidden');
+        });
+
+        registerTab.addEventListener('click', () => {
+            registerTab.classList.add('border-brand-950', 'text-brand-950');
+            registerTab.classList.remove('text-gray-400', 'border-transparent');
+            loginTab.classList.remove('border-brand-950', 'text-brand-950');
+            loginTab.classList.add('text-gray-400', 'border-transparent');
+            registerForm.classList.remove('hidden');
+            loginForm.classList.add('hidden');
+        });
+
+        // Optional: Redirect simulation after form submission
+        loginForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            // Show alert or redirect to dash
+            alert('Successfully Logged In!');
+        });
+
+        registerForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Account Created Successfully!');
+        });
+    </script>
+</body>
+</html>

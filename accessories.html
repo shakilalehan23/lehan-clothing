@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accessories Collection | Lehan Clothing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f6f6f6',
+                            950: '#1a1a1a',
+                            500: '#6d6d6d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+    <!-- Navigation -->
+    <nav id="navbar" class="w-full relative z-50 bg-white border-b border-gray-100 sticky top-0 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            <a href="index.html" class="text-3xl font-extrabold tracking-tighter uppercase text-brand-950 hover:text-gray-600 transition">Lehan.</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="index.html" class="text-sm font-semibold text-gray-600 hover:text-brand-950 transition">Home</a>
+                <a href="shop.html" class="text-sm font-semibold text-gray-600 hover:text-brand-950 transition">Shop</a>
+                <a href="about.html" class="text-sm font-semibold text-gray-600 hover:text-brand-950 transition">About Us</a>
+                <a href="contact.html" class="text-sm font-semibold text-gray-600 hover:text-brand-950 transition">Contact</a>
+            </div>
+            <a href="cart.html" class="hover:text-gray-500 transition relative">
+                <i class="fas fa-shopping-cart text-xl"></i>
+                <span class="global-cart-count absolute -top-2 -right-2 bg-brand-950 text-white text-xs font-bold rounded-full h-4 w-4 flex items-center justify-center">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="bg-gray-50 py-20 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-5xl md:text-6xl font-black text-brand-950 uppercase tracking-tighter mb-6 fade-in">Accessories</h1>
+            <p class="text-gray-500 max-w-2xl mx-auto fade-in delay-100 text-lg">Complete your look with our curated selection of premium accessories.</p>
+        </div>
+    </div>
+
+    <!-- Collection Grid -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+            <!-- Accessory 1 -->
+            <div class="product-card group cursor-pointer" data-category="accessories" data-price="8900">
+                <div class="relative w-full h-[30rem] bg-gray-100 overflow-hidden rounded-sm mb-6">
+                    <img src="assets/images/product8.png" alt="Minimalist Leather Backpack" class="product-image w-full h-full object-cover object-center">
+                    <div class="absolute bottom-0 left-0 w-full p-4 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-10">
+                        <button class="w-full bg-white/90 text-brand-950 font-bold py-3 uppercase text-sm tracking-wider border hover:bg-brand-950 hover:text-white transition">Add to Cart</button>
+                    </div>
+                </div>
+                <h3 class="text-lg font-bold text-gray-900 group-hover:text-brand-500 transition">Minimalist Leather Backpack</h3>
+                <p class="text-lg font-extrabold text-brand-950 mt-1">Rs. 8,900</p>
+            </div>
+            
+            <div class="col-span-full text-center py-20 bg-gray-50 rounded-sm border-2 border-dashed border-gray-200">
+                <p class="text-gray-400 font-medium">More premium accessories arriving soon. Stay tuned!</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 pt-20 pb-10 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 text-left">
+                <div>
+                    <h3 class="text-3xl font-black tracking-tighter uppercase text-brand-950 mb-6 font-black">Lehan.</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Elevating Sri Lankan streetwear to global standards. Premium quality clothing designed for the modern individual.</p>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-brand-950 mb-6 font-bold">Shop</h4>
+                    <ul class="space-y-3">
+                        <li><a href="shop.html" class="text-gray-500 hover:text-brand-950 transition text-sm">All Products</a></li>
+                        <li><a href="mens-collection.html" class="text-gray-500 hover:text-brand-950 transition text-sm">Men's Collection</a></li>
+                        <li><a href="womens-collection.html" class="text-gray-500 hover:text-brand-950 transition text-sm">Women's Collection</a></li>
+                        <li><a href="accessories.html" class="text-gray-500 hover:text-brand-950 transition text-sm">Accessories</a></li>
+                        <li><a href="new-arrivals.html" class="text-gray-500 hover:text-brand-950 transition text-sm">New Arrivals</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-brand-950 mb-6 font-bold">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-500 hover:text-brand-950 transition text-sm">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-500 hover:text-brand-950 transition text-sm">Contact Us</a></li>
+                        <li><a href="faq.html" class="text-gray-500 hover:text-brand-950 transition text-sm">FAQ</a></li>
+                        <li><a href="terms.html" class="text-gray-500 hover:text-brand-950 transition text-sm">Terms & Conditions</a></li>
+                        <li><a href="privacy.html" class="text-gray-500 hover:text-brand-950 transition text-sm">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-brand-950 mb-6 font-bold">Contact Info</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-brand-500 mt-1 mr-3"></i>
+                            <span class="text-gray-500 text-sm">12 St. Sylvester Road, Mount Lavinia, Sri Lanka.</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-200 text-center items-center">
+                <p class="text-gray-400 text-sm">&copy; 2026 Lehan Clothing (Pvt) Ltd. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

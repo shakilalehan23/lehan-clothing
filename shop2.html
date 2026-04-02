@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shop | Lehan Clothing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f6f6f6',
+                            950: '#1a1a1a',
+                            500: '#6d6d6d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+
+<body class="bg-white text-gray-900 antialiased">
+
+    <!-- Reusable Navbar (Dark Theme) -->
+    <nav class="w-full relative z-50 bg-white border-b border-gray-100 sticky top-0 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <div class="flex-shrink-0 flex items-center">
+                    <a href="index.html"
+                        class="text-3xl font-extrabold tracking-tighter uppercase text-brand-950 hover:text-brand-500 transition">Lehan.</a>
+                </div>
+                <div class="hidden md:flex space-x-8 items-center">
+                    <a href="index.html"
+                        class="text-sm font-semibold text-gray-600 hover:text-brand-950 transition">Home</a>
+                    <a href="shop.html"
+                        class="text-sm font-semibold text-brand-950 border-b-2 border-brand-950 pb-1">Shop</a>
+                    <a href="about.html"
+                        class="text-sm font-semibold text-gray-600 hover:text-brand-950 transition">About Us</a>
+                    <a href="contact.html"
+                        class="text-sm font-semibold text-gray-600 hover:text-brand-950 transition">Contact</a>
+                </div>
+                <div class="hidden md:flex items-center space-x-5 text-gray-900">
+                    <a href="#" class="hover:text-brand-500 transition"><i class="fas fa-search text-xl"></i></a>
+                    <a href="account.html" class="hover:text-brand-500 transition"><i class="far fa-user text-xl"></i></a>
+                    <a href="cart.html" class="hover:text-brand-500 transition relative">
+                        <i class="fas fa-shopping-cart text-xl"></i>
+                        <span class="global-cart-count absolute -top-2 -right-2 bg-brand-950 text-white text-xs font-bold rounded-full h-4 w-4 flex items-center justify-center">0</span>
+                    </a>
+                </div>
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="focus:outline-none"><i
+                            class="fas fa-bars text-2xl"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <div class="bg-gray-50 py-16 border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h1 class="text-4xl md:text-5xl font-black text-brand-950 uppercase tracking-tight mb-4 fade-in">Our
+                Collection</h1>
+            <p class="text-gray-500 max-w-2xl mx-auto fade-in delay-100">Page 2 of our premium selection.</p>
+        </div>
+    </div>
+
+    <!-- Shop Content -->
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 flex flex-col md:flex-row gap-10">
+        <!-- Sidebar Filters -->
+        <div class="w-full md:w-1/4 fade-in delay-200">
+            <div class="bg-white p-6 border border-gray-100 sticky top-28 rounded-sm shadow-sm opacity-90">
+                <h3 class="font-bold text-lg uppercase tracking-wider mb-6 pb-4 border-b">Filters</h3>
+
+                <div class="mb-8">
+                    <h4 class="font-semibold mb-4 text-sm uppercase">Search</h4>
+                    <div class="relative">
+                        <input type="text" id="search-filter" placeholder="Search products..."
+                            class="w-full border border-gray-200 text-sm py-2 px-4 pr-10 focus:outline-none focus:border-brand-950 bg-white">
+                        <i class="fas fa-search absolute right-3 top-3 text-gray-400 text-sm"></i>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h4 class="font-semibold mb-4 text-sm uppercase">Category</h4>
+                    <div class="space-y-2">
+                        <label class="flex items-center space-x-3 cursor-pointer"><input type="checkbox"
+                                class="category-filter form-checkbox text-brand-950 rounded-sm focus:ring-brand-950 accent-brand-950 w-4 h-4"
+                                value="all" checked><span class="text-gray-700 text-sm">All</span></label>
+                        <label class="flex items-center space-x-3 cursor-pointer"><input type="checkbox"
+                                class="category-filter form-checkbox text-brand-950 rounded-sm focus:ring-brand-950 accent-brand-950 w-4 h-4"
+                                value="mens"><span class="text-gray-700 text-sm">Men's</span></label>
+                        <label class="flex items-center space-x-3 cursor-pointer"><input type="checkbox"
+                                class="category-filter form-checkbox text-brand-950 rounded-sm focus:ring-brand-950 accent-brand-950 w-4 h-4"
+                                value="womens"><span class="text-gray-700 text-sm">Women's</span></label>
+                        <label class="flex items-center space-x-3 cursor-pointer"><input type="checkbox"
+                                class="category-filter form-checkbox text-brand-950 rounded-sm focus:ring-brand-950 accent-brand-950 w-4 h-4"
+                                value="accessories"><span class="text-gray-700 text-sm">Accessories</span></label>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h4 class="font-semibold mb-4 text-sm uppercase">Price Range</h4>
+                    <input type="range" id="price-filter" min="0" max="15000" step="100" value="15000"
+                        class="w-full accent-brand-950">
+                    <div class="flex justify-between text-xs text-gray-500 mt-2">
+                        <span>Rs. 0</span>
+                        <span id="price-display">Rs. 15,000+</span>
+                    </div>
+                </div>
+
+                <button id="apply-filters-btn"
+                    class="w-full bg-brand-950 text-white py-3 font-bold uppercase text-sm tracking-wider hover:bg-gray-800 transition rounded-none">Apply
+                    Filters</button>
+            </div>
+        </div>
+
+        <!-- Product Grid -->
+        <div class="w-full md:w-3/4 fade-in delay-300">
+            <div class="flex justify-between items-center mb-8 border-b pb-4 border-gray-100">
+                <p id="results-info" class="text-gray-500 text-sm">Showing 10–18 of 18 results</p>
+                <select id="sort-filter"
+                    class="border border-gray-200 text-sm py-2 px-4 focus:outline-none focus:border-brand-950 bg-white">
+                    <option value="default">Default Sorting</option>
+                    <option value="popularity">Sort by Popularity</option>
+                    <option value="latest">Sort by Latest</option>
+                    <option value="price-low">Sort by Price: Low to High</option>
+                    <option value="price-high">Sort by Price: High to Low</option>
+                </select>
+            </div>
+
+            <div id="product-grid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 10 -->
+                <div class="product-card group cursor-pointer inline-block" data-category="mens" data-price="5500" data-popularity="82" data-date="2026-04-02">
+                    <div class="relative w-full h-[24rem] bg-gray-100 overflow-hidden rounded-sm mb-4">
+                        <img src="assets/images/product1.png" alt="Graphic Skater Hoodie" class="product-image w-full h-full object-cover object-center">
+                        <div class="absolute bottom-0 left-0 w-full p-3 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-10">
+                            <button class="w-full bg-white/90 text-brand-950 font-bold py-2 uppercase text-xs tracking-wider border hover:bg-brand-950 hover:text-white transition">Add to Cart</button>
+                        </div>
+                    </div>
+                    <h3 class="text-base font-bold text-gray-900 group-hover:text-brand-500">Graphic Skater Hoodie</h3>
+                    <p class="text-base font-extrabold text-brand-950 mt-1">Rs. 5,500</p>
+                </div>
+                <!-- Product 11 -->
+                <div class="product-card group cursor-pointer inline-block" data-category="womens" data-price="3200" data-popularity="68" data-date="2026-02-15">
+                    <div class="relative w-full h-[24rem] bg-gray-100 overflow-hidden rounded-sm mb-4">
+                        <img src="assets/images/product2.png" alt="Lightweight Summer Blouse" class="product-image w-full h-full object-cover object-center">
+                        <div class="absolute bottom-0 left-0 w-full p-3 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-10">
+                            <button class="w-full bg-white/90 text-brand-950 font-bold py-2 uppercase text-xs tracking-wider border hover:bg-brand-950 hover:text-white transition">Add to Cart</button>
+                        </div>
+                    </div>
+                    <h3 class="text-base font-bold text-gray-900 group-hover:text-brand-500">Lightweight Summer Blouse</h3>
+                    <p class="text-base font-extrabold text-brand-950 mt-1">Rs. 3,200</p>
+                </div>
+                <!-- Product 12 -->
+                <div class="product-card group cursor-pointer inline-block" data-category="accessories" data-price="2500" data-popularity="92" data-date="2026-01-20">
+                    <div class="relative w-full h-[24rem] bg-gray-100 overflow-hidden rounded-sm mb-4">
+                        <img src="assets/images/product3.png" alt="Classic Aviator Sunglasses" class="product-image w-full h-full object-cover object-center">
+                        <div class="absolute bottom-0 left-0 w-full p-3 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-10">
+                            <button class="w-full bg-white/90 text-brand-950 font-bold py-2 uppercase text-xs tracking-wider border hover:bg-brand-950 hover:text-white transition">Add to Cart</button>
+                        </div>
+                    </div>
+                    <h3 class="text-base font-bold text-gray-900 group-hover:text-brand-500">Classic Aviator Sunglasses</h3>
+                    <p class="text-base font-extrabold text-brand-950 mt-1">Rs. 2,500</p>
+                </div>
+                <!-- Product 13 -->
+                <div class="product-card group cursor-pointer inline-block" data-category="mens" data-price="6800" data-popularity="80" data-date="2026-03-22">
+                    <div class="relative w-full h-[24rem] bg-gray-100 overflow-hidden rounded-sm mb-4">
+                        <img src="assets/images/product4.png" alt="Premium Slim Fit Jeans" class="product-image w-full h-full object-cover object-center">
+                        <div class="absolute bottom-0 left-0 w-full p-3 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-10">
+                            <button class="w-full bg-white/90 text-brand-950 font-bold py-2 uppercase text-xs tracking-wider border hover:bg-brand-950 hover:text-white transition">Add to Cart</button>
+                        </div>
+                    </div>
+                    <h3 class="text-base font-bold text-gray-900 group-hover:text-brand-500">Premium Slim Fit Jeans</h3>
+                    <p class="text-base font-extrabold text-brand-950 mt-1">Rs. 6,800</p>
+                </div>
+                <!-- Product 14 -->
+                <div class="product-card group cursor-pointer inline-block" data-category="womens" data-price="4100" data-popularity="77" data-date="2026-04-05">
+                    <div class="relative w-full h-[24rem] bg-gray-100 overflow-hidden rounded-sm mb-4">
+                        <img src="assets/images/product5.png" alt="Floral Midi Skirt" class="product-image w-full h-full object-cover object-center">
+                        <div class="absolute bottom-0 left-0 w-full p-3 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-10">
+                            <button class="w-full bg-white/90 text-brand-950 font-bold py-2 uppercase text-xs tracking-wider border hover:bg-brand-950 hover:text-white transition">Add to Cart</button>
+                        </div>
+                    </div>
+                    <h3 class="text-base font-bold text-gray-900 group-hover:text-brand-500">Floral Midi Skirt</h3>
+                    <p class="text-base font-extrabold text-brand-950 mt-1">Rs. 4,100</p>
+                </div>
+                <!-- Product 15 -->
+                <div class="product-card group cursor-pointer inline-block" data-category="accessories" data-price="9500" data-popularity="88" data-date="2026-02-14">
+                    <div class="relative w-full h-[24rem] bg-gray-100 overflow-hidden rounded-sm mb-4">
+                        <img src="assets/images/product6.png" alt="Canvas Weekend Duffle" class="product-image w-full h-full object-cover object-center">
+                        <div class="absolute top-3 left-3 bg-brand-950 text-white text-xs font-bold px-2 py-0.5 uppercase tracking-wider z-10">Premium</div>
+                        <div class="absolute bottom-0 left-0 w-full p-3 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-10">
+                            <button class="w-full bg-white/90 text-brand-950 font-bold py-2 uppercase text-xs tracking-wider border hover:bg-brand-950 hover:text-white transition">Add to Cart</button>
+                        </div>
+                    </div>
+                    <h3 class="text-base font-bold text-gray-900 group-hover:text-brand-500">Canvas Weekend Duffle</h3>
+                    <p class="text-base font-extrabold text-brand-950 mt-1">Rs. 9,500</p>
+                </div>
+                <!-- Product 16 -->
+                <div class="product-card group cursor-pointer inline-block" data-category="mens" data-price="8200" data-popularity="94" data-date="2026-01-05">
+                    <div class="relative w-full h-[24rem] bg-gray-100 overflow-hidden rounded-sm mb-4">
+                        <img src="assets/images/product7.png" alt="Basic White Sneaker" class="product-image w-full h-full object-cover object-center">
+                        <div class="absolute bottom-0 left-0 w-full p-3 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-10">
+                            <button class="w-full bg-white/90 text-brand-950 font-bold py-2 uppercase text-xs tracking-wider border hover:bg-brand-950 hover:text-white transition">Add to Cart</button>
+                        </div>
+                    </div>
+                    <h3 class="text-base font-bold text-gray-900 group-hover:text-brand-500">Basic White Sneaker</h3>
+                    <p class="text-base font-extrabold text-brand-950 mt-1">Rs. 8,200</p>
+                </div>
+                <!-- Product 17 -->
+                <div class="product-card group cursor-pointer inline-block" data-category="womens" data-price="12500" data-popularity="72" data-date="2026-03-30">
+                    <div class="relative w-full h-[24rem] bg-gray-100 overflow-hidden rounded-sm mb-4">
+                        <img src="assets/images/product8.png" alt="Elegant Evening Gown" class="product-image w-full h-full object-cover object-center">
+                        <div class="absolute bottom-0 left-0 w-full p-3 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-10">
+                            <button class="w-full bg-white/90 text-brand-950 font-bold py-2 uppercase text-xs tracking-wider border hover:bg-brand-950 hover:text-white transition">Add to Cart</button>
+                        </div>
+                    </div>
+                    <h3 class="text-base font-bold text-gray-900 group-hover:text-brand-500">Elegant Evening Gown</h3>
+                    <p class="text-base font-extrabold text-brand-950 mt-1">Rs. 12,500</p>
+                </div>
+                <!-- Product 18 -->
+                <div class="product-card group cursor-pointer inline-block" data-category="accessories" data-price="1800" data-popularity="85" data-date="2025-12-10">
+                    <div class="relative w-full h-[24rem] bg-gray-100 overflow-hidden rounded-sm mb-4">
+                        <img src="assets/images/product9.png" alt="Chunky Knit Beanie" class="product-image w-full h-full object-cover object-center">
+                        <div class="absolute bottom-0 left-0 w-full p-3 transform translate-y-full group-hover:translate-y-0 transition-transform duration-300 z-10">
+                            <button class="w-full bg-white/90 text-brand-950 font-bold py-2 uppercase text-xs tracking-wider border hover:bg-brand-950 hover:text-white transition">Add to Cart</button>
+                        </div>
+                    </div>
+                    <h3 class="text-base font-bold text-gray-900 group-hover:text-brand-500">Chunky Knit Beanie</h3>
+                    <p class="text-base font-extrabold text-brand-950 mt-1">Rs. 1,800</p>
+                </div>
+            </div>
+
+            <!-- Pagination -->
+            <div id="pagination-container" class="flex justify-center mt-12 space-x-2">
+                <a href="shop.html" class="w-10 h-10 flex items-center justify-center border border-gray-200 text-gray-700 hover:bg-gray-50 font-bold cursor-pointer transition">1</a>
+                <a href="shop2.html" class="w-10 h-10 flex items-center justify-center bg-brand-950 text-white font-bold cursor-pointer hover:bg-brand-800 transition">2</a>
+                <span class="w-10 h-10 flex items-center justify-center border border-gray-200 text-gray-300 font-bold cursor-not-allowed transition"><i class="fas fa-chevron-right"></i></span>
+            </div>
+        </div>
+    </div>
+
+    <footer class="bg-gray-50 pt-20 pb-10 border-t border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16 text-left">
+                <div>
+                    <h3 class="text-3xl font-black tracking-tighter uppercase text-brand-950 mb-6">Lehan.</h3>
+                    <p class="text-gray-500 text-sm leading-relaxed mb-6">Elevating Sri Lankan streetwear to global standards. Premium quality clothing designed for the modern individual.</p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-brand-950 hover:text-white hover:border-brand-950 transition shadow-sm"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-brand-950 hover:text-white hover:border-brand-950 transition shadow-sm"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-white border border-gray-200 flex items-center justify-center text-gray-500 hover:bg-brand-950 hover:text-white hover:border-brand-950 transition shadow-sm"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-brand-950 mb-6">Shop</h4>
+                    <ul class="space-y-3">
+                        <li><a href="shop.html" class="text-gray-500 hover:text-brand-950 transition text-sm">All Products</a></li>
+                        <li><a href="mens-collection.html" class="text-gray-500 hover:text-brand-950 transition text-sm">Men's Collection</a></li>
+                        <li><a href="womens-collection.html" class="text-gray-500 hover:text-brand-950 transition text-sm">Women's Collection</a></li>
+                        <li><a href="accessories.html" class="text-gray-500 hover:text-brand-950 transition text-sm">Accessories</a></li>
+                        <li><a href="new-arrivals.html" class="text-gray-500 hover:text-brand-950 transition text-sm">New Arrivals</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-brand-950 mb-6">Company</h4>
+                    <ul class="space-y-3">
+                        <li><a href="about.html" class="text-gray-500 hover:text-brand-950 transition text-sm">About Us</a></li>
+                        <li><a href="contact.html" class="text-gray-500 hover:text-brand-950 transition text-sm">Contact Us</a></li>
+                        <li><a href="faq.html" class="text-gray-500 hover:text-brand-950 transition text-sm">FAQ</a></li>
+                        <li><a href="terms.html" class="text-gray-500 hover:text-brand-950 transition text-sm">Terms & Conditions</a></li>
+                        <li><a href="privacy.html" class="text-gray-500 hover:text-brand-950 transition text-sm">Privacy Policy</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-sm font-bold uppercase tracking-widest text-brand-950 mb-6">Contact Info</h4>
+                    <ul class="space-y-4">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt text-brand-500 mt-1 mr-3"></i>
+                            <span class="text-gray-500 text-sm">12 St. Sylvester Road, Mount Lavinia, Sri Lanka.</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt text-brand-500 mr-3"></i>
+                            <span class="text-gray-500 text-sm">076 830 4918</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope text-brand-500 mr-3"></i>
+                            <span class="text-gray-500 text-sm">info@lehanclothing.com</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="pt-8 border-t border-gray-200 text-center flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400 text-sm">&copy; 2026 Lehan Clothing (Pvt) Ltd. All rights reserved.</p>
+                <div class="mt-4 md:mt-0 flex space-x-4">
+                    <i class="fab fa-cc-visa text-gray-400 text-2xl"></i>
+                    <i class="fab fa-cc-mastercard text-gray-400 text-2xl"></i>
+                    <i class="fab fa-cc-amex text-gray-400 text-2xl"></i>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

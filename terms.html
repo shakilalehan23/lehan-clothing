@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terms & Conditions | Lehan Clothing</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        brand: {
+                            50: '#f6f6f6',
+                            950: '#1a1a1a',
+                            500: '#6d6d6d',
+                        }
+                    }
+                }
+            }
+        }
+    </script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body class="bg-white text-gray-900 antialiased">
+
+    <!-- Reusable Navbar -->
+    <nav class="w-full relative z-50 bg-white border-b border-gray-100 sticky top-0 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex justify-between items-center h-20">
+            <a href="index.html" class="text-3xl font-extrabold tracking-tighter uppercase text-brand-950 hover:text-brand-500 transition">Lehan.</a>
+            <div class="hidden md:flex space-x-8 items-center">
+                <a href="index.html" class="text-sm font-semibold text-gray-600 hover:text-brand-950 transition">Home</a>
+                <a href="shop.html" class="text-sm font-semibold text-gray-600 hover:text-brand-950 transition">Shop</a>
+                <a href="about.html" class="text-sm font-semibold text-gray-600 hover:text-brand-950 transition">About Us</a>
+                <a href="contact.html" class="text-sm font-semibold text-gray-600 hover:text-brand-950 transition">Contact</a>
+            </div>
+            <a href="cart.html" class="hover:text-brand-500 transition relative">
+                <i class="fas fa-shopping-cart text-xl"></i>
+                <span class="global-cart-count absolute -top-2 -right-2 bg-brand-950 text-white text-xs font-bold rounded-full h-4 w-4 flex items-center justify-center">0</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="max-w-4xl mx-auto px-4 py-24">
+        <h1 class="text-5xl font-black uppercase tracking-tight mb-12 text-center text-brand-950">Terms & Conditions</h1>
+        
+        <div class="space-y-10 text-gray-600 font-light leading-relaxed">
+            <div>
+                <h3 class="text-xl font-bold uppercase tracking-wider mb-4 text-brand-950">1. Agreement to Terms</h3>
+                <p>Welcome to Lehan Clothing. By using our website and purchasing our products, you agree to comply with and be bound by the following terms and conditions of use.</p>
+            </div>
+            
+            <div>
+                <h3 class="text-xl font-bold uppercase tracking-wider mb-4 text-brand-950">2. Product Availability</h3>
+                <p>All items on our website are subject to availability. We will inform you as soon as possible if the goods you have ordered are not available.</p>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold uppercase tracking-wider mb-4 text-brand-950">3. Pricing and Payment</h3>
+                <p>All prices are listed in Sri Lankan Rupees (Rs.). We reserve the right to change prices at any time. Secure payment methods are provided at checkout.</p>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold uppercase tracking-wider mb-4 text-brand-950">4. Shipping and Delivery</h3>
+                <p>Shipping is currently limited to Sri Lanka. Delivery times are estimated and not guaranteed. Lehan Clothing is not responsible for delays beyond our control.</p>
+            </div>
+
+            <div>
+                <h3 class="text-xl font-bold uppercase tracking-wider mb-4 text-brand-950">5. Limitation of Liability</h3>
+                <p>Lehan Clothing shall not be liable for any special or consequential damages that result from the use of, or the inability to use, the materials on this site or the performance of the products.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-gray-50 pt-20 pb-10 border-t border-gray-200 text-center flex flex-col items-center">
+        <h3 class="text-3xl font-black tracking-tighter uppercase text-brand-950 mb-4">Lehan.</h3>
+        <p class="text-gray-400 text-sm">&copy; 2026 Lehan Clothing (Pvt) Ltd. All rights reserved.</p>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
